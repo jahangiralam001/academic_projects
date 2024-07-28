@@ -1,0 +1,463 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background */
+  }.header{
+    height: 70px;
+    width: 100rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 1px 2px  rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.12);
+  }
+  .left-section{
+    width: 100%;
+    max-width: 300px;
+    margin-left: 10px;
+    
+  }
+  .Home_button{
+    font-family: Arial;
+    font-size: 27px;
+    height: 42px;
+    width: 120px;
+    margin-left: 340px;
+    margin-top: 13px;
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+  .Home_button:hover{
+    opacity: 0.3;
+  }
+  .middle-section{
+    flex: 0.70;
+    margin-left: 10px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .search-bar{
+    font-size: 16px;
+    margin-top: 0px;
+    flex: 0.85;
+    height: 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192,192,192);
+    border-radius: 2px;
+    padding-left: 40px;
+    box-shadow: inset 1px 2px 5px rgba(0,0,0,0.05);
+  }
+  .search-button{
+    height: 43px;
+    width: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192,192,192);
+    margin-right: 40px;
+    margin-left: -1.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search-button:hover{
+    opacity: 0.3;
+  }
+  .search_icon{
+    margin-left: 3px;
+    margin-top: -0px;
+  }
+  .profile-logout-btn {
+    display: flex;
+    align-items: center;
+    }
+    
+    .profile-logout-btn a {
+    text-decoration: none;
+    }
+    
+    .profile-logout-btn button {
+    margin-left: 10px;
+    height: 42px;
+    padding: 0 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    font-family: Arial;
+    font-size: 16px;
+    }
+    
+    .profile-logout-btn button:hover {
+    opacity: 0.3;
+    }
+  
+  .sidebar{
+    position: fixed;
+    bottom: 0;
+    left: 0px;
+    top: 0px;
+    width: 220px;
+    background-color: rgb(200, 194, 241);
+  }
+  .all-btn{
+    margin-top: 5rem;
+  }
+  .sidebar
+  button{
+    margin: -0.5rem;
+    height: 35px;
+    width: 200px;
+    border: none;
+    font-size: 17.5px;
+    padding-top: 2rem;
+    cursor: pointer;
+    display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 39px;
+    background-color: rgb(200, 194, 241);
+  }
+  .sidebar
+  button:hover{
+    opacity: 0.3;
+  }
+  .horizontal-line{
+    width: 100%;
+  }
+  /*.life-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px; /* Adjust the gap as needed 
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #fff; /* Adjust the background color as needed 
+      font-size: 16px;
+  }
+  
+  .life-button img {
+      width: 37px; /* Adjust the width of the image as needed 
+      height: 37px;/* Adjust the height of the image as needed 
+  }*/
+  .home{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px; /* Adjust the gap as needed */
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #fff; /* Adjust the background color as needed */
+      font-size: 16px;
+  }
+  .home img {
+      width: 21px; /* Adjust the width of the image as needed */
+      height: 21px;/* Adjust the height of the image as needed */
+  }
+  .study-tools{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px; /* Adjust the gap as needed */
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #fff; /* Adjust the background color as needed */
+      font-size: 16px;
+  }
+  .study-tools img {
+      width: 24px; /* Adjust the width of the image as needed */
+      height: 24px;/* Adjust the height of the image as needed */
+  }
+  .post-q-btn-img{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px; /* Adjust the gap as needed */
+      padding: 10px;
+    padding-left: 2.1rem;
+      border: none;
+      cursor: pointer;
+      background-color: #fff; /* Adjust the background color as needed */
+      font-size: 16px;
+  }
+  .post-q-btn-img img {
+      width: 21px; /* Adjust the width of the image as needed */
+      height: 21px;/* Adjust the height of the image as needed */
+  }
+  .ai-btn-img{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px; /* Adjust the gap as needed */
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #fff; /* Adjust the background color as needed */
+      font-size: 16px;
+  }
+  .ai-btn-img img {
+      width: 30px; /* Adjust the width of the image as needed */
+      height: 30px;/* Adjust the height of the image as needed */
+  }
+  .my-c-btn-img{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px; /* Adjust the gap as needed */
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #fff; /* Adjust the background color as needed */
+      font-size: 16px;
+  }
+  .my-c-btn-img img {
+      width: 22px; /* Adjust the width of the image as needed */
+      height: 22px;/* Adjust the height of the image as needed */
+  }
+  .my-books-btn-img{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px; /* Adjust the gap as needed */
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #fff; /* Adjust the background color as needed */
+      font-size: 16px;
+  }
+  .my-books-btn-img img {
+      width: 27px; /* Adjust the width of the image as needed */
+      height: 27px;/* Adjust the height of the image as needed */
+  }
+  .subscribe{
+    height: 100px;
+    width: 100px;
+  }
+  .card{
+    background-color: #FFFAF0;
+    align-items: center;
+    bottom: 280px;
+    position: absolute;
+    padding-top: 20px;
+    left: 500px;
+    height: 250px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  
+  
+  /* Further adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 10px; /* Reduced padding for smaller screens */
+    }
+  
+    .sidebar .all-btn button,
+    .sidebar .subscribe button {
+      padding: 10px; /* Reduced padding for smaller buttons */
+    }
+  
+    .sidebar .all-btn button img,
+    .sidebar .subscribe button img {
+      width: 16px; /* Smaller icons for smaller screens */
+      height: 16px;
+    }
+  }
+  /* Adjust the space below the question title */
+.question h1 {
+  margin-bottom: 1rem; /* Space below the question title */
+}
+
+/* Adjust the space below the question text paragraph */
+.question p {
+  margin-bottom: 1rem; /* Space below the question text */
+}
+
+/* Style the image to have space above and below it */
+.question img {
+    margin: 10px 0;
+    width: 100%;
+    background-color: rgba(246, 247, 251, 255);
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    min-height: 500px;
+    min-width: 610px;
+    height: auto;
+    overflow-y: auto;
+  }
+  
+
+/* Answer section styling remains unchanged */
+.answer {
+  text-align: left;
+  padding: 20px;
+  margin-top: 2rem; /* Additional space above the answer section if needed */
+}
+
+  
+  /* Main content */
+  .main-content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+  }
+  
+  /* Header styles */
+  header {
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Rest of the styles remain unchanged */
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .first-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar {
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Main content styles */
+  .main-content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+  }
+  
+  .qa-section {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  /* Answer text styling */
+.answer p {
+    margin-bottom: 1rem; /* Standard gap between the text and anything below it */
+  }
+/* Specific styles for images inside the .answer container */
+.answer img {
+    margin: 10px 0;
+    width: 100%;
+    background-color: rgba(246, 247, 251, 255);
+    padding: 30px 20px 50px 30px;
+    box-sizing: border-box;
+    min-height: 500px;
+    min-width: 610px;
+    height: auto;
+    overflow-y: auto;
+  }
+  
+  /* Increased specificity to ensure these styles are not overridden */
+  div.show-exp-ans img.idea {
+    max-width: 100px; /* Control the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto 20px; /* Center image and add space below */
+    display: block; /* Ensure image is on its own line */
+    /* Ensure other properties are not affected */
+    background-color: transparent;
+    padding: 0;
+    min-height: initial;
+    min-width: initial;
+    overflow-y: visible;
+  }
+  
+  
+  
+  .question h1,
+  .answer h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+/* Placeholder styles for when an answer is not yet available */
+.show-exp-ans {
+    text-align: center; /* Center content horizontally */
+    padding: 20px;
+    border: 1px solid #ccc; /* Add a border for visual structure */
+    margin-top: 20px; /* Space above the placeholder area */
+    background-color: #f9f9f9; /* Light background for the placeholder */
+    border-radius: 4px; /* Slight rounding of corners */
+  }
+  
+  /* Styles for the placeholder image */
+
+  
+  /* Styles for the placeholder text */
+  .show-exp-ans p {
+    font-size: 1rem; /* Standard font size for the text */
+    color: #555; /* Text color */
+    margin-bottom: 20px; /* Space below the text */
+  }
+  
+  
+  /* Buttons inside .show-exp-ans if any */
+  .show-exp-ans button {
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  
+  /* Additional responsive adjustments */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    .main-content {
+      margin-left: 0;
+    }
+  
+    .nav .first-section,
+    .nav .middle-section,
+    .nav .nav_item {
+      flex-direction: column;
+    }
+  
+    .search-bar {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+  
+  /* Add additional media queries and styles as needed */
+  

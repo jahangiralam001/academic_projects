@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>submit_question</title>
+	
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	
+		<!-- font awesome cdn link  -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+		<!-- custom css file link  -->
+		<link rel="stylesheet" href="css/submit_question.css">
+	
+	</head>
+<body>
+	<header class="header">
+    <nav class="nav">
+         <button class="go-back-btn" onclick="goBack();">
+    Go back
+</button>
+
+       <div class="nav_item">
+
+       <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img class="user-profile-icons\user.jpg">
+                <h2>User</h2>
+                    
+                </div>
+                <hr>
+    <a href="#" class="sub-menu-link">
+    <img src="user-profile-icons\edit profile img.png">
+    <p>Edit Profile</p>
+    <span></span>
+    </a>
+
+    <a href="#" class="sub-menu-link">
+    <img src="user-profile-icons\settings img.png">
+    <p>Settings & Privacy</p>
+    <span></span>
+    </a>
+
+    <a href="#" class="sub-menu-link">
+    <img src="user-profile-icons\help and supporr img.png">
+    <p>Help & Support</p>
+    <span></span>
+    </a>
+
+    <a href="#" class="sub-menu-link">
+    <img src="user-profile-icons\logout img.png">
+    <p>Logout</p>
+    <span></span>
+    </a>
+      </div>
+        </div> 
+        <div>
+        <img src="user-profile-icons\user.jpg" alt="User Profile" class="user-pic" onclick="toggleMenu()">
+    </div>
+        
+    </nav>
+    </header>
+
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
+
+ {{!-- sidebar for all --}}
+		 {{>sidebar}}
+{{!-- sidebar for all --}}
+
+  
+
+ <div class="paragraphs">
+ 	<p class="AaE">Ask an Expert</p>
+ 	<p class="sub">Get step by step homework help in just 30 miniutes!</p>
+ 	<p class="sub_sub">Our solutions are designed to help you learn and check your work. Review our honor code to see how we support academic integrity</p>
+ 	<p class="sub_sub_sub">Step 1 of 2: What's your question?</p>
+ 	<p class="sub_sub_sub_sub">You can drag and drop or upload images</p>
+ </div>
+
+  <div>
+     <form action="/submit_question" method="POST" enctype="multipart/form-data">
+
+        {{!-- <div id="editor" name="txtQuestion"></div> --}}
+        <textarea class="copypaste_box" name="question" placeholder="Write Your Question Here..." ></textarea>
+        <input class="attach_file" type="file" name="file" id="fileInput">
+        <label for="fileInput">Attach Your Question Here</label>
+
+         
+    	<p class="step-2-of-2">Step 2 of 2: Select a subject</p>
+
+      <div class="radio_input">
+
+        <div><input type="radio" id="cse" name="sub" value="CSE" required>
+        <label for="cse">CSE</label><br>
+       <input type="radio" id="bba" name="sub" value="BBA" required>
+       <label for="bba">BBA</label><br>
+       <input type="radio" id="math" name="sub" value="MATH" required>
+       <label for="math">MATH</label>
+       </div>
+
+      <div><input type="radio" id="uiu" name="university" value="UIU" required>
+      <label for="uiu">UIU</label><br>
+       <input type="radio" id="brac" name="university" value="BRAC" required>
+      <label for="brac">BRAC</label><br>
+       <input type="radio" id="nsu" name="university" value="NSU" required>
+      <label for="nsu">NSU</label><br>
+       </div>
+      </div>
+    
+    
+   <button class="post-question-button" type="submit">Post</button>
+    
+     </form>
+	      
+    </div>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+</body>
+</html>

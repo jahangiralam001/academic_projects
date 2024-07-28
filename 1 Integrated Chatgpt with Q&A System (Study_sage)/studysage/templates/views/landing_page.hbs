@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Landing page</title>
+
+	
+		<!-- font awesome cdn link  -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	
+		<!-- custom css file link  -->
+		<link rel="stylesheet" href="css/landing_page.css">
+
+		
+	
+	</head>
+<body>
+	{{#if messages.success}}
+    <div class="alert alert-success">
+        <strong>{{ messages.success }}</strong>
+    </div>
+{{/if}}
+
+	{{!-- //nav from template/partials --}}
+   {{>navbar}}
+
+ <div class="paragraph">
+ 	<p>Ease your study journey with<br>
+ 	the help of our <span>AI expert</span> and <span>Human expert</span></p>
+ 	<p class="sub">Cover various subjects from 
+ 	different fields</p>
+ 	<p class="sub_sub">Unlimited access to 1.5 million+ textbook solutions.</p>
+ 	<p class="sub_sub_sub">Step by step textbook solutions.</p>
+ 	
+	 <a href="submit_question"><button class="Human_Expert_button""> Human EXpert </button></a>
+ 	<button class="Human_Expert_button">
+ 		Ai EXpert
+ 	</button>
+ </div> 
+
+ <div><button class="submit_questions_button">
+	Submit Questions & get Solutions
+</button>
+
+<div class="card-card">
+<div class="card">
+  <form action="/k" method="POST" enctype="multipart/form-data">
+    <input class="email_box" type="email" name="email" placeholder="Enter Your Email ID" required>
+
+    <input class="select_topic_box" type="text" name="topic" placeholder="Select Topic" required>
+
+    <textarea class="copypaste_box" name="question" placeholder="Write Your Question Here..." required></textarea>
+
+    <input class="how_soon_need_answer_box" type="number" name="req_time" placeholder="How soon do you need an Answer? (e.g., 30 min)">
+
+    <input class="attach_file" type="file" name="file">
+
+    <button class="Get_Answer_button" type="submit">Get Answer</button>
+  </form>
+
+  <p class="referall">Got a referral code?</p>
+</div>
+
+ 	</div>
+	</div>
+
+
+ 	<div class="second_paragraph">
+ 		
+		<p>Subjects Will be Covered <br>
+ 		by our Experts help</p>
+ 	<p class="sub">Cover various subjects from 
+ 	different fields</p>
+ 	<p class="sub_sub">Unlimited access to 1.5 million+ textbook solutions.</p>
+ 	<p class="sub_sub_sub">Step by step textbook solutions.</p>
+ 		<a href="subscribe"><button class="Human_Expert_button""> Subscribe now </button></a>
+ 	</div>
+
+	<div class="six-subject-btn">
+		<div>
+		<button class="DSA-ML">Data Structure <br>
+		& Algorithm</button>
+		<button class="DSA-ML">Machine<br> Learning</button>
+		</div>
+
+		<div>
+		<button class="A-C">Accounting</button>
+		<button class="A-C">Calculus</button>
+		</div>
+
+		<div>
+		<button class="C-A">Computer<br> Networks</button>
+		<button class="C-A">Artificial<br> Intelligence</button>
+		</div>
+		
+		<div>
+		<button class="F-M">Finance</button>
+		<button class="F-M">Marketing</button>
+		</div>
+	</div>
+
+	
+  <div class="teacher_image_container">
+ 	<img src="landing page image\single tutor.jpg" width="500" height="500">
+ 	 </div>	
+ 	<div class="third_paragraph_container">
+ 		<div class="second_paragraph">
+ 		<p>Connect With an Online Tutor</p>
+ 		<p class="sub_third_paragraph">No long queues for TA | Tutors Available 24/7</p>
+ 		<p class="sub_sub">More than 100 years of combined teaching experience</p>
+ 		<p class="sub_sub_sub">op University Recruits for all your College Subjects</p>
+ 		<p class="sub_sub_sub_sub">Online Tutoring with one to one interaction</p>
+ 	</div>
+ 	<div class="button">
+	<a href="subscribe" style="text-decoration: none; color:ghostwhite">Subscribe now</a>
+	</div>	
+  </div>
+
+
+<section class="swiper"> 
+        <h2 class="swiper-title">Our Courses</h2>
+        <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+        <div class="swiper-container">
+            <div class="swiper-card">
+                <div class="swiper-image">
+                    <img src="landing page image\DSA.jpg" class="plan-thumb" alt="">
+                    <span class="botm-txt">DSA</span>
+					</div>
+               </div>
+
+            <div class="swiper-card">
+                <div class="swiper-image">
+                    <img src="landing page image\person-using-ai-tool-job.jpg" class="plan-thumb" alt="">
+                    <span class="botm-txt">ML</span>
+                   </div>
+                </div>
+
+            <div class="swiper-card">
+                <div class="swiper-image">
+                   <img src="landing page image\13311397_v617batch2-kul-05-technology.jpg" class="swiper-thumb" alt="">
+					<span class="botm-txt">CSE</span>
+                   </div>
+				</div>
+
+            <div class="swiper-card">
+                <div class="swiper-image">
+                    <img src="landing page image\business-strategy-success-target-goals.jpg" class="swiper-thumb" alt="">
+					<span class="botm-txt">Marketing</span>
+                   </div>
+				</div>
+
+            <div class="swiper-card">
+                <div class="swiper-image">
+                    <img src="landing page image\21534706_6379114.jpg" class="swiper-thumb" alt="">
+					<span class="botm-txt">Finance</span>
+                </div>
+            </div>
+
+            <div class="swiper-card">
+                <div class="swiper-image">
+                   <img src="landing page image\Computer Network.jpg" class="swiper-thumb" alt="">
+				<span class="botm-txt">Networking</span>
+            </div>
+        </div>
+	</div>
+</section>
+
+
+	
+<section class="plan"> 
+        <h2 class="plan-title">Human Experts</h2>
+        <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+        <div class="plan-container">
+            <div class="plan-card">
+                <div class="plan-image">
+                   <img src="landing page image\smile tutor.jpg" class="plan-thumb" alt="">
+                  </div>
+               </div>
+
+            <div class="plan-card">
+                <div class="plan-image">
+                    <img src="landing page image\attractive-businesswoman-with-folders-hands.jpg" class="plan-thumb" alt="">
+                    </div>
+                </div>
+
+            <div class="plan-card">
+                <div class="plan-image">
+                   <img src="landing page image/female tutor.jpg" class="plan-thumb" alt="">
+					</div>
+                </div>
+
+            <div class="plan-card">
+                <div class="plan-image">
+                    <img src="landing page image\side-view-smiley-woman-holding-book.jpg" class="plan-thumb" alt="">
+                   </div>
+                </div>
+
+            <div class="plan-card">
+                <div class="plan-image">
+                   <img src="landing page image/portrait-happy-young-man-eyeglasses.jpg" class="plan-thumb" alt="">
+                </div>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-image">
+                   <img src="landing page image\pleased-young-businessman-wearing-glasses-holding-book-isolated-white-background.jpg" class="plan-thumb" alt="">
+                </div>
+            </div>
+		 </div>
+    </section>
+
+
+<section class="footer-contacts">
+	<div class="footer-c">
+		<p>Company</p>
+		<button>About Study Sage</button><br>
+		<button>Study sage for good</button><br>
+		<button>Investor Relations</button><br>
+		<button>Jobs</button><br>
+		<button>Site Map</button>
+	</div>
+
+	<div class="footer-c">
+		<p>Customer Service</p>
+		<button>Give Us Feedback</button><br>
+		<button>Customer Service</button><br>
+		<button>Manage Subscription</button>
+	</div>
+
+	<div class="footer-c">
+		<p>Study Sage Products & Services</p>
+		<button>AI Expert</button><br>
+		<button>Human Expert</button><br>
+		<button>Study Guide</button><br>
+		<button>Learn</button>
+	</div>
+
+	<div class="footer-c">
+		<p>Educators</p>
+		<button>Institute of Digital Learning</button><br>
+		<button>Academic Integrity</button><br>
+		<button>Study Guide</button><br>
+		<button>Learn</button>
+	</div>
+
+</section>
+		
+<section class="footer"
+
+<a href="#">
+  <button class="footer-para">Sign Up Today to become part of Studysage community of 50,000 students</button>
+</a>
+
+	<a href="#">
+  <button class="sign-up-now-btn">Sign Up Now</button>
+</a>
+</section>
+
+<div class="footer-social-btns">
+	<div class="fsb">
+	<div>
+    <button><img class="fb" src="icons\facebook.jpg" width="50" height="40" alt="search_img"></button>
+    <button><img class="twit" src="icons\twitter.jpg" width="40" height="35" alt="search_img"></button>
+    <button><img class="inst" src="icons\instagram.jpg" width="37" height="38" alt="search_img"></button>
+   </div>
+
+   <div>
+    <button><img class="G" src="icons\App-Store-Icon.jpg" width="135" height="44" alt="search_img"></button>
+    <button><img class="A" src="icons\Google-Play-icon.jpg" width="137" height="45" alt="search_img"></button>
+   </div>
+</div>
+
+<hr class="horizontal-line">
+
+<div class="footer-bottom">
+	<div>
+  	<p class="footer-msg">© 20023-2024 StudySage Inc. All rights reserved.</p>
+    </div>
+
+	<div class="cydgp"> 
+    <button>Cookie Notice</button>
+    <button>Your Privacy Choices</button>
+    <button>Do not sell my info</button>
+    <button>General Policies</button>
+    <button>Privacy Policy</button>
+	</div>
+</div>
+
+
+<script> 
+
+const planContainers = [...document.querySelectorAll('.plan-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+planContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
+</script>
+
+</body>
+</html>

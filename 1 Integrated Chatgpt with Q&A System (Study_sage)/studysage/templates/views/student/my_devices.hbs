@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Devices</title>
+  <link rel="stylesheet" type="text/css" href="css/student_css/my_devices.css">
+</head>
+<body>
+  {{> student_nav}}
+</div>
+
+<div>
+  <p class="MD">My Devices</p>
+</div>
+
+<div class="welcome-msg">
+  <p>Here is Your Last 3 Login Activity</p>
+</div>
+
+<div class="index">
+  <section style="height: 25px; background-color: #DCDCDC; ">
+    <h2>Devices</h2>
+    <p style="position: absolute; left: 500px; top: 20px; font-family: Arial; font-size: 14px; font-weight: bold;">Last accessed</p>
+  </section>
+  
+ {{#each loginInfoList}}
+<section class="device-entry">
+  <h2>{{ this.device }}</h2>
+  <p class="device-info">{{ this.ip }} - {{ this.formattedLoginTime }}</p>
+</section>
+{{/each}}
+
+</div>
+
+
+<div>
+  <p class="footer-msg">© 2023-2024 StudySage Inc. All rights reserved.</p>
+</div>
+
+<div>
+  <p class="msg-2">Academic integrity / Feedback / Help center / Manage subscription</p>
+</div>
+
+<hr class="horizontal-line">
+
+<div class="cydgphi">
+  <button>Cookie Notice</button>
+  <button>Your Privacy Choices</button>
+  <button>Do not sell my info</button>
+  <button>General Policies</button>
+  <button>Privacy Policy</button>
+</div>
+
+</body>
+</html>

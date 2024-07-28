@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>submit_question</title>
+	
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	
+		<!-- font awesome cdn link  -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<!-- Include stylesheet -->
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+<!-- Include the Quill library -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+		<!-- custom css file link  -->
+		<link rel="stylesheet" href="css/submit_question.css">
+	
+	</head>
+<body>
+	<div class="header">
+	<div class="left-section">
+		<button class="Go_back_button">
+			Go back
+		</button>
+   </div>
+		</div>
+{{!-- sidebar for all --}}
+		 {{>sidebar}}
+{{!-- sidebar for all --}}
+ <div class="paragraphs">
+ 	<p class="AaE">Ask an Expert</p>
+ 	<p class="sub">Get step by step homework help in just 30 miniutes!</p>
+ 	<p class="sub_sub">Our solutions are designed to help you learn and check your work. Review our honor code to see how we support academic integrity</p>
+ 	<p class="sub_sub_sub">Step 1 of 2: What's your question?</p>
+ 	<p class="sub_sub_sub_sub">You can drag and drop or upload images</p>
+ </div>
+
+  <div class="text-editor">
+     <form action="/submit_question" method="POST" enctype="multipart/form-data">
+     
+     <input class="attach_file" type="file" name="file">
+
+        {{!-- <div id="editor" name="txtQuestion"></div> --}}
+        <textarea class="copypaste_box" name="question" placeholder="Write Your Question Here..." ></textarea>
+
+         
+    	<p class="step-2-of-2">Step 2 of 2: Select a subject</p>
+
+      <div class="radio_input">
+
+        <input type="radio" id="cse" name="sub" value="CSE" required>
+        <label for="cse">CSE</label><br>
+       <input type="radio" id="bba" name="sub" value="BBA" required>
+       <label for="bba">BBA</label><br>
+       <input type="radio" id="math" name="sub" value="MATH" required>
+       <label for="math">MATH</label>
+      </div>
+    
+    
+   <button class="post-question-button" type="submit">Post question</button>
+    
+     </form>
+	      
+    </div>
+
+{{!-- 
+    <div>
+    	<button class="continue-button">Continue</button>
+    </div>
+
+ --}}
+
+
+
+
+
+
+
+
+
+	
+	<script>
+var quill = new Quill('#editor', {
+  theme: 'snow'
+});
+
+// Add a custom handler for the image upload
+function selectLocalImage() {
+  const input = document.createElement('input');
+  input.setAttribute('type', 'file');
+  input.click();
+
+  // Listen upload local image and save to server
+  input.onchange = () => {
+    const file = input.files[0];
+
+    // file type is only image.
+    if (/^image\//.test(file.type)) {
+      saveToServer(file);
+    } else {
+      console.warn('You could only upload images.');
+    }
+  };
+}
+
+// Save images to server
+function saveToServer(file) {
+  const fd = new FormData();
+  fd.append('image', file);
+
+  // Your API endpoint or server-side script to save the image
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', '/upload/image', true);
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      // This is where you handle the URL of the image
+      const url = JSON.parse(xhr.responseText).url;
+      insertToEditor(url);
+    }
+  };
+  xhr.send(fd);
+}
+
+// Insert the image URL into the editor
+function insertToEditor(url) {
+  // Get the range where the image is to be inserted
+  const range = quill.getSelection();
+  quill.insertEmbed(range.index, 'image', url);
+}
+
+// Add the image handler to the Quill toolbar
+quill.getModule('toolbar').addHandler('image', selectLocalImage);
+
+</script>
+
+
+</body>
+</html>
