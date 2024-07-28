@@ -17,25 +17,22 @@ experts
 Some of the features:
 ---------------------------------------------------
 ---------------------------------------------------
-Authentication/Login/Sign-up with mail verification
-Search Question (NAF)
-Post Questions
-Answer Questions
-Study Guide/Materials 
-Like/Dislike & Comment (NAF)
-User Profile. 
-Ai Expert
-PDF Reader
-Human Expert
-Human Expert Profile 
-Admin Panel (NAF)
+
+01. Authentication/Login/Sign-up with mail verification  
+02. Search Question (NAF)  
+03. Post Questions  
+04. Answer Questions  
+05. Study Guide/Materials  
+06. Like/Dislike & Comment (NAF)  
+07. User Profile  
+08. Ai Expert  
+09. PDF Reader  
+10. Human Expert  
+11. Human Expert Profile  
+12. Admin Panel (NAF)
 
 
 //not added functionality (NAF)
-
-
-
-
 
 ----------------------------------------------------
 some cmd to start server/
@@ -43,8 +40,6 @@ npm install axios --save
 
 npx create-react-app ai_bot
 npm start
-
-
 
 cd server
 npm install
