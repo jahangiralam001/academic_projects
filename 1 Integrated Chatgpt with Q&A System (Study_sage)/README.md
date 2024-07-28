@@ -41,8 +41,6 @@ npm install axios --save
 npx create-react-app ai_bot
 npm start
 
-
-
 cd server
 npm install
 node server
