@@ -1,0 +1,9 @@
+Admin 
+
+mail : admin@admin.com
+pass : password
+
+User
+
+mail : LindaD13@protonmail.com
+pass : 123
